@@ -76,7 +76,8 @@ defmodule Quantum.Mixfile do
     [
       {:timex, "~> 3.1", optional: true},
       {:calendar, "~> 0.17", optional: true},
-      {:crontab, "~> 1.1"},
+      # Use tmepple/crontab which supports Ecto 3.0 until upstream is updated
+      {:crontab, github: "tmepple/crontab"},
       {:gen_stage, "~> 0.12"},
       {:earmark, "~> 1.0", only: [:dev, :docs], runtime: false},
       {:ex_doc, "~> 0.13", only: [:dev, :docs], runtime: false},
